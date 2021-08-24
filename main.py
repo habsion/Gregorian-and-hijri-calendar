@@ -14,6 +14,7 @@ for m in range(1,13):
     mon=calendar.month(y,m).split('\n')
     print(mon[0])
     print(hijri_month_name(int(mon[-2].rstrip()[-2::])))
+    print(mon[1])
     t=len(mon[2].split())
     print(mon[2],'\n',' '*3*(7-t),' '.join(str(Gregorian(y, m, i).to_hijri()).split('-')[2] for i in range(1,t+1)),sep='')
     for i in mon[3:]:
